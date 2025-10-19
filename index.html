@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B1 Wallet — Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <div id="peso-fall"></div>
+
+  <main class="card auth-card">
+    <h1 class="brand">B1 Wallet</h1>
+    <p class="lead">Smarter, Faster Online Lending</p>
+
+    <form id="loginForm" class="form">
+      <label>NAME:
+        <input id="name" type="text" required placeholder="Your full name">
+      </label>
+
+      <label>GCASH/MAYA NUMBER:
+        <input id="phone" type="tel" inputmode="numeric" pattern="\d*" placeholder="09171234567">
+      </label>
+
+      <label>GMAIL:
+        <input id="email" type="email" placeholder="you@gmail.com" required>
+      </label>
+
+      <label class="remember"><input id="remember" type="checkbox"> android/ios remember me</label>
+
+      <div class="actions">
+        <button type="submit" class="btn primary">LOGIN</button>
+        <a href="about.html" class="btn ghost">ABOUT</a>
+      </div>
+    </form>
+
+    <p class="small muted">First time users receive Bonus e-wallet + ₱500</p>
+  </main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

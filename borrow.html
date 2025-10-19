@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B1 Wallet — Borrow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="borrow-page">
+  <div id="peso-fall"></div>
+  <header class="topbar">
+    <div class="brand">B1 Wallet</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="calc.html">Calculator</a>
+      <a href="payment.html">Payment</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Borrow</h2>
+      <p>Minimum ₱5,000.00 — Maximum ₱99,999.00</p>
+      <form id="borrowForm">
+        <label>Loan Amount (type up to 5 digits, don't include .00):
+          <input id="loanAmount" type="number" min="5000" max="99999" required placeholder="e.g. 15000">
+        </label>
+
+        <label>Loan Period (months):
+          <select id="loanPeriod">
+            <option value="6">6 months (Interest 18%)</option>
+            <option value="12">12 months (Interest 21%)</option>
+          </select>
+        </label>
+
+        <p class="muted">Interest rate is fixed: 18% for 6 months, 21% for 12 months. Platform & processing fee: ₱894.33</p>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Calculate & Proceed</button>
+          <a href="dashboard.html" class="btn ghost">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

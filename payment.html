@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B1 Wallet — Payment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="payment-page">
+  <div id="peso-fall"></div>
+  <header class="topbar">
+    <div class="brand">B1 Wallet</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="borrow.html">Borrow</a>
+      <a href="calc.html">Calculator</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Payment</h2>
+      <p>Scan the QR code below to pay. After payment, screenshot and upload for verification. Verification: 24 hours.</p>
+      <div class="qrwrap">
+        <img src="https://raw.githubusercontent.com/b1loan/B1Loan-Gcash/e0cc136d4cf8d000f245ccc086c92e923a751c43/Untitled66_20251019151120.jpeg" alt="QR Code" class="qr">
+      </div>
+
+      <label>Upload Payment Screenshot:
+        <input id="uploadProof" type="file" accept="image/*">
+      </label>
+
+      <p class="muted">Platform & processing Fee shown earlier: ₱894.33</p>
+
+      <div class="actions">
+        <button id="uploadBtn" class="btn primary">Upload and Submit for Verification</button>
+        <a href="dashboard.html" class="btn ghost">Back to Dashboard</a>
+      </div>
+
+      <div id="status" class="status"></div>
+    </section>
+  </main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B1 Wallet — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+  <div id="peso-fall"></div>
+
+  <header class="topbar">
+    <div class="brand">B1 Wallet</div>
+    <nav>
+      <a href="borrow.html">Borrow</a>
+      <a href="calc.html">Calculator</a>
+      <a href="about.html">About</a>
+      <a href="index.html" id="logout">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel hero">
+      <div class="greeting">HI <span id="userName">User</span></div>
+      <div class="wallet">B1 Wallet Balance: <span id="walletBalance">₱0.00</span></div>
+      <div class="simulation">Money Simulation: <span id="moneySim">₱0.00</span></div>
+      <div class="bonus">Bonus e-wallet: <strong>+ ₱500</strong></div>
+    </section>
+
+    <section class="panel details">
+      <p>Can loan up to <strong>₱5,000 - ₱99,999</strong></p>
+      <p class="description">B1 Wallet is your trusted online lending platform, built to make financial access simple, secure, and transparent...</p>
+      <p>Borrower as of today: <strong id="borrowers">678</strong> people</p>
+      <a class="btn primary" href="borrow.html">Borrow</a>
+    </section>
+  </main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
