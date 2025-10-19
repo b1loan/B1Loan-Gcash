@@ -7,8 +7,8 @@ Files:
 - dashboard.html
 - borrow.html
 - payment.html
-- assets/css/style.css
-- assets/js/*.js
+- style.css
+- *.js
 
 How to deploy:
 1. Upload files to GitHub repository root.
