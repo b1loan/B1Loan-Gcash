@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Payment — B1Loan-Gcash</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-payment">
+  <div class="cash-layer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand"><h1>B1Loan-Gcash</h1></div>
+    <div class="top-actions">
+      <a href="borrow.html" class="btn ghost">Back</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card payment-card">
+      <h2>Pay Processing & Platform Fee</h2>
+      <p>Please scan the QR code below and pay <strong>₱568</strong>. Use your GCash or Maya app.</p>
+
+      <div class="qr-wrap">
+        <img id="qrImage" src="https://raw.githubusercontent.com/b1loan/B1Loan-Gcash/f1614fa8ba6ae18df720f58733255bab438c623c/Background%20Eraser.png" alt="QR code or background image">
+      </div>
+
+      <form id="paymentForm">
+        <label>
+          Upload screenshot of payment (required):
+          <input id="screenshot" type="file" accept="image/*" required>
+        </label>
+
+        <div class="actions">
+          <button id="submitPayment" type="button" class="btn primary">Submit for Verification</button>
+          <button id="viewQRBtn" type="button" class="btn ghost" onclick="openQRModal()">View QR</button>
+        </div>
+
+        <div id="afterSubmit" class="info small" hidden>
+          <p>Thank you. Your payment proof has been submitted. Verification will take up to <strong>24 hours</strong>. Please keep your screenshot until verification completes.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="qrModal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeQRModal()">✕</button>
+      <img src="https://raw.githubusercontent.com/b1loan/B1Loan-Gcash/f1614fa8ba6ae18df720f58733255bab438c623c/Background%20Eraser.png" alt="QR code large">
+      <p class="small">Tap the image to save or scan with another device.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <small>For inquiries: help@pautangpeso.com • Globe: +639666511466 • Smart: +639397195157</small>
+  </footer>
+
+  <script src="assets/login.js"></script>
+  <script src="assets/payment.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

