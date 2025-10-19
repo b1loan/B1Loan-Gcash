@@ -1,0 +1,128 @@
+/* Improved corporate style with animated SVG bills and modal */
+:root{
+  --bg:#f5fbff;
+  --card:#ffffff;
+  --primary:#0b5fd7;
+  --accent:#2aa6ff;
+  --muted:#6b7280;
+  --shadow: 0 10px 30px rgba(11,36,64,0.08);
+  --maxwidth:980px;
+}
+
+/* basic reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#e9f6ff 0%, var(--bg) 60%);
+  color:#0b2440;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px;
+  max-width:var(--maxwidth);
+  margin:18px auto;
+}
+.brand h1{margin:0;font-size:20px;color:var(--primary);letter-spacing:0.4px}
+.brand .sub{margin:0;font-size:12px;color:var(--muted)}
+
+.container{max-width:var(--maxwidth);margin:12px auto;padding:0 18px}
+
+/* card */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,252,255,0.95));
+  border-radius:14px;
+  padding:22px;
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
+  border:1px solid rgba(11,36,64,0.04);
+}
+
+/* login form */
+.login-card{max-width:520px;margin:20px auto;padding:30px}
+.login-card h2{text-align:left;color:var(--primary);margin-bottom:8px}
+label{display:block;margin:12px 0;font-size:14px;color:var(--muted)}
+.pin-row{display:flex;flex-direction:column}
+input[type="text"],input[type="tel"],input[type="password"],input[type="email"],select,input[type="number"],input[type="file"]{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid rgba(11,36,64,0.08);
+  font-size:14px;
+  margin-top:6px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(250,250,255,0.4));
+  transition:box-shadow .18s, transform .12s;
+}
+input:focus{outline:none;box-shadow:0 6px 20px rgba(11,36,64,0.06);transform:translateY(-2px)}
+
+.actions{margin-top:18px;display:flex;gap:10px;align-items:center}
+.btn{
+  padding:10px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
+  transition:transform .12s, box-shadow .12s, opacity .12s;
+}
+.btn.primary{background:linear-gradient(90deg,var(--primary), var(--accent)); color:white; box-shadow:0 6px 18px rgba(11,95,215,0.12)}
+.btn.ghost{background:transparent;border:1px solid rgba(11,36,64,0.06);color:var(--primary)}
+.btn:active{transform:translateY(1px)}
+.btn.disabled, .btn[aria-disabled="true"]{opacity:0.5;pointer-events:none}
+
+/* dashboard panel */
+.money-panel{display:block;padding:16px;border-radius:10px;background:linear-gradient(90deg,#ffffff, #f7fbff)}
+.money-row{display:flex;justify-content:space-between;gap:18px;align-items:center}
+.money{font-size:34px;font-weight:800;color:var(--primary);margin-top:6px;letter-spacing:0.5px}
+.small-money{font-size:18px;font-weight:700;color:#1a8f5a}
+
+/* info box */
+.info-box{margin-top:16px;background:#f0f7ff;padding:14px;border-radius:10px;color:var(--muted)}
+
+/* footer */
+.site-footer{max-width:var(--maxwidth);margin:24px auto 40px;text-align:center;color:var(--muted)}
+
+/* cash-layer & SVG bills */
+.cash-layer{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  overflow:hidden;
+}
+.bill {
+  position:absolute;
+  top:-10%;
+  width:72px;height:40px;
+  transform-origin:center;
+  animation-name: fallRot;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity:0.95;
+}
+@keyframes fallRot {
+  0%{transform: translateY(-12vh) rotate(-10deg); opacity:0}
+  8%{opacity:1}
+  100%{transform: translateY(120vh) rotate(360deg); opacity:0.95}
+}
+
+/* modal */
+.modal{
+  position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(3,12,28,0.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .18s;
+}
+.modal[aria-hidden="false"]{opacity:1;pointer-events:auto}
+.modal-content{background:var(--card);padding:18px;border-radius:12px;max-width:420px;width:92%;text-align:center;box-shadow:var(--shadow);position:relative}
+.modal-close{position:absolute;right:8px;top:8px;border:0;background:transparent;font-size:18px;cursor:pointer}
+
+/* qr */
+.qr-wrap{display:flex;justify-content:center;margin:12px 0}
+.qr-wrap img{width:160px;height:160px;object-fit:cover;border-radius:8px;border:6px solid #fff;box-shadow:0 8px 22px rgba(11,36,64,0.12);cursor:pointer}
+
+/* responsive */
+@media (max-width:720px){
+  .money-row{flex-direction:column;align-items:flex-start}
+  .topbar{padding:12px}
+  .login-card{padding:18px}
+}

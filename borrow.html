@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Borrow — B1Loan-Gcash</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-borrow">
+  <div class="cash-layer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>B1Loan-Gcash</h1>
+    </div>
+    <div class="top-actions">
+      <a href="dashboard.html" class="btn ghost">Back</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card borrow-card">
+      <h2>Borrow</h2>
+      <form id="borrowForm" autocomplete="off">
+        <label>
+          Loan Amount (₱):
+          <input id="loanAmount" type="number" min="1000" max="110000" required step="100" value="1000">
+        </label>
+
+        <label>
+          Loan Period (months):
+          <select id="loanMonths">
+            <option value="6">6 months — Interest 18%</option>
+            <option value="12">12 months — Interest 21%</option>
+          </select>
+        </label>
+
+        <div class="fees">
+          <p>Platform & Processing fee (one-time/month): <strong>₱568</strong></p>
+          <p>Interest Rate: <span id="interestRateTxt">18%</span></p>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="calcBtn" class="btn primary">Calculate</button>
+          <a id="proceedPayBtn" class="btn ghost disabled" aria-disabled="true">Pay Fee & Process</a>
+        </div>
+
+        <div id="calcResult" class="calc-result" hidden>
+          <h4>Loan Details</h4>
+          <p id="loanBreakdown"></p>
+        </div>
+      </form>
+
+      <footer class="small">Payments due every 30th. Processing time: verification ~24 hours.</footer>
+    </section>
+  </main>
+
+  <script src="assets/js/login.js"></script>
+  <script src="assets/js/borrow.js"></script>
+</body>
+</html>
