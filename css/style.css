@@ -1,0 +1,57 @@
+/* B1Loan-Gcash: Corporate sky blue theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{
+  --bg1:#e3f2fd;
+  --bg2:#bbdefb;
+  --primary:#0d47a1;
+  --accent:#1976d2;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --glass: rgba(255,255,255,0.6);
+}
+*{box-sizing:border-box;font-family:'Poppins',sans-serif}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#033060;}
+
+/* peso falling canvas */
+#peso-fall{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+
+/* topbar */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;position:relative;z-index:5}
+.topbar .brand{font-weight:700}
+.topbar nav a{color:#fff;margin-left:12px;text-decoration:none;font-weight:600}
+
+/* cards and layout */
+.container{max-width:980px;margin:28px auto;position:relative;z-index:5;padding:0 16px}
+.card, .panel{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 8px 24px rgba(13,71,161,0.12);margin-bottom:18px}
+.auth-card{max-width:420px;margin:60px auto;padding:22px;text-align:left;z-index:5}
+.brand{font-size:26px;color:var(--primary);font-weight:700;margin-bottom:6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.form label{display:block;margin:10px 0;color:#03406b}
+.form input, .form select{width:100%;padding:10px;border-radius:8px;border:1px solid #dbeafe;background:var(--glass)}
+.actions{margin-top:12px;display:flex;gap:8px}
+.btn{padding:10px 14px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff}
+.btn.ghost{background:transparent;color:var(--primary);border:1px solid rgba(13,71,161,0.12)}
+
+.small{font-size:13px}
+.muted{color:var(--muted)}
+
+/* dashboard hero */
+.hero{display:flex;flex-direction:column;gap:8px}
+.greeting{font-size:20px;font-weight:700}
+.wallet, .simulation{font-size:18px}
+.qrwrap{text-align:center;padding:10px}
+.qr{max-width:280px;border-radius:8px;border:1px solid #ddd}
+
+/* status */
+.status{margin-top:12px;padding:10px;border-radius:8px;background:#fff8e6;border:1px solid #ffecb5;color:#7a5b00}
+
+/* responsive */
+@media(min-width:720px){
+  .hero{flex-direction:row;justify-content:space-between;align-items:center}
+  .auth-card{margin-top:100px}
+}
+
+/* small helper */
+.label-inline{display:flex;gap:8px;align-items:center}
